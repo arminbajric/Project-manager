@@ -1,0 +1,14 @@
+.new-project{
+    background-color: #303030;
+    color:white;
+    padding-left: 15px;
+}
+.button{
+    outline: none;
+    border: 0px;
+    background-color: #212121;
+    color: white;
+}
+.button:hover{
+    background-color: #424242;
+}

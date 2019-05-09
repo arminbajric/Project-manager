@@ -1,27 +1,16 @@
-# TaskManager
+# Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+User interface and functionality of this project was developed using Angular 7,Boostrap 4,CSS and Javascript
 
-## Development server
+# Backend
+Restfull service was developed using Spring boot ,Hibernate and PostreSQL as database.
+Github link to this repository is
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#About
+This project is imagined as it will be used by  companies and their employees to help them creating
+different tasks in differnt projects.Each project will be started by project manager who will ,afterwards, add employees and assign tasks to them.Every task will have actions so one task can be assigned to one or more employees.Every action will have a possible validation by employees.After validation employee will be recogized as ono who resolved action.
+Each task will be submitted after all actions are validated.
+Employees assigned to project can create new tasks and assign them to colegues but it must be approved by project manager.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

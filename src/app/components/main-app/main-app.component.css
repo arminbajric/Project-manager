@@ -1,0 +1,36 @@
+.user{
+   text-align: center;
+   color: white;
+}
+.text-center{
+   text-align: center;
+}
+.title{
+   background-color: black;
+   color:#212121;
+   text-align: center;
+   border-radius: 5px;
+}
+.menu{
+   background-color: #212121;
+
+}
+button{
+   outline: none;
+   border:0;
+   background-color: transparent;
+}
+.button{
+   background-color: #303030;
+   color:white;
+   padding-top: 5px;
+}
+.button:hover{
+   background-color: #212121;
+}
+.activity{
+   background-color: #212121;
+   height: 250px;
+   overflow-y: scroll;
+    max-height: 250px;
+}
