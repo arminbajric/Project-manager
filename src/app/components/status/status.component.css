@@ -1,0 +1,10 @@
+.container{
+    color: white;
+    padding-left: 15px;
+}
+.card{
+    background-color: #424242;
+}
+.table{
+    border:none !important;
+}

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu'); 
+.project{
+    outline: none;
+    border:none;
+    background-color: transparent;
+    font-family: 'Ubuntu',sans-serif;
+}
+.container{
+  
+    color: white !important;
+   
+    max-height: 300px;
+    padding-left: 15px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+.card{
+    background-color: #424242;
+    
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  
+  ::-webkit-scrollbar-track {
+    background: #424242; 
+  }
+   
+  
+  ::-webkit-scrollbar-thumb {
+    background: #212121; 
+    border-radius: 3px;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #111111; 
+  }

@@ -1,8 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class="col col-lg-3 menu">
+    <div id="fixedMenu" class="col col-lg-3 ">
+     
       <h4 class="title">Task manager</h4>
-      <div class="row panel panel-default">
+      <div class="row card ">
         <div class="col user">
           <img src="../../../assets/images/user.png" width="60px" height="60px" alt="User icon"><br>
           <span>Username</span><br>
@@ -10,26 +11,54 @@
         </div>
 
       </div>
+   
       <div class="row">
-        <button type="button" class="col button" (click)="addNewProject()">Add new project</button>
+        <button type="button" id="new" class="col menuButton" onclick="setActive(this.id)" (click)="addNewProject()"><img src="../../../assets/images/icons8-add-filled-50.png" width="25px" height="25px" class="icon"><span class="icon">New project</span></button>
       </div>
       <div class="row">
-        <button type="button" class="col button">Manage existing</button>
+        <button type="button" id="edit" class="col menuButton" onclick="setActive(this.id)" (click)="manageProjects()"><img src="../../../assets/images/icons8-compose-filled-50.png" width="25px" height="25px" class="icon"><span class="icon">Manage</span> </button>
       </div>
       <div class="row">
-        <button type="button" class="col button">Manage workplace</button>
+        <button type="button" id="manage" class="col menuButton" onclick="setActive(this.id)" (click)="manageWorkplace()"><img src="../../../assets/images/icons8-user-account-26.png" width="25px" height="25px" class="icon"><span class="icon">Workplace</span></button>
       </div>
       <div class="row">
-        <button type="button" class="col button">Ongoing projects</button>
+        <button type="button" id="ongoing" class="col menuButton" onclick="setActive(this.id)" (click)="ongoingProjects()"><img src="../../../assets/images/icons8-road-construction-filled-50.png" width="25px" height="25px" class="icon"><span class="icon">Ongoing</span> </button>
       </div>
       <div class="row">
-        <button type="button" class="col button">Finished projects</button>
+        <button type="button" id="done" class="col menuButton" onclick="setActive(this.id)" (click)="finishedProjects()"><img src="../../../assets/images/icons8-checkmark-filled-50.png" width="25px" height="25px" class="icon"><span class="icon">Completed</span></button>
       </div>
-      <div class="row">
-        <div class="col activity"></div>
+      <div class="row card activity">
+       
+        <div class="container">
+          <div class="row"> <h5>Recent activity</h5></div>
+          <div class="row">
+            <div class="col card activity-card">
+             Activity 1
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col card activity-card">
+             Activity 2
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col card activity-card">
+             Activity 3
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col card activity-card">
+             Activity 4
+            </div>
+            
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col ">
       <div class="container">
         <div #main class="row  ">
         

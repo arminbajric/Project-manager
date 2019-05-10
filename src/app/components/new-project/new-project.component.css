@@ -1,5 +1,5 @@
 .new-project{
-    background-color: #303030;
+   
     color:white;
     padding-left: 15px;
 }
@@ -10,5 +10,36 @@
     color: white;
 }
 .button:hover{
-    background-color: #424242;
+    background-color: #303030;
 }
+.card{
+    background-color: #424242;
+    padding-left: 2px;
+    padding-right: 5px;
+    margin-top: 5px;
+}
+datalist { 
+    display: none;
+  }
+  #workersList{
+    overflow-y:auto;
+  }
+  #workersList ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  
+  #workersList::-webkit-scrollbar-track {
+    background: #424242; 
+  }
+   
+  
+  #workersList ::-webkit-scrollbar-thumb {
+    background: #212121; 
+    border-radius: 3px;
+  }
+  
+  
+  #workersList ::-webkit-scrollbar-thumb:hover {
+    background: #111111; 
+  }

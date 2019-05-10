@@ -25,7 +25,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/js/autocomplete.js",
+              "src/assets/js/script manager.js",
+              "src/assets/js/common.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {

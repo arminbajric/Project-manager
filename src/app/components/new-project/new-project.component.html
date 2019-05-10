@@ -1,5 +1,5 @@
-<form>
-  <div class="container new-project">
+<form  (keydown.enter)="$event.preventDefault()" class="card" (submit)="saveProject()">
+  <div class="container  new-project">
     <div class="row">
       <h4>Add new project</h4>
     </div>
@@ -11,6 +11,10 @@
       <label class="col col-md-5" for="summary">Project summary</label>
       <textarea class="col form-control" rows="6" id="summary" placeholder="Summary..."></textarea>
     </div>
+    <div class="form-group row ">
+      <label class="col col-md-5" for="notes">Important notes</label>
+      <textarea class="col form-control" rows="3" id="notes" placeholder="Notes..."></textarea>
+    </div>
     <div class="form-group row">
       <label for="doc" class="col col-md-5">Documentation</label>
       <input type="file" multiple="true" id="doc" class="col form-control">
@@ -20,12 +24,14 @@
       <input id="deadline" type="date" class="col form-control" placeholder="Date...">
     </div>
     <div class="form-group row ">
-      <label for="workers" class="col col-md-5">Add workers</label>
-      <input type="text"  class="col form-control" id="workers" (enter)="addWorkerToProject()" (change)="searchForSimilar()" placeholder="Type to select workers...">
+      <label for="workersList" class="col col-md-5">Add workers</label>
+      <input type="text"  class="col form-control" id="workersList" list="workers"  onchange="addToProject(this.value)" placeholder="Type to select workers...">
+      <datalist id="workers"></datalist>
     </div>
+    <div class="form-group row" id="selected"></div>
   </div>
-  <div class="form-group row" id="selected"></div>
+ 
   <div class="form-group  row">
-    <button class="button  col col-md-4 offset-8" type="submit" >Save project</button>
+    <button class="button  col col-md-4 offset-7" type="submit" >Save project</button>
   </div>
 </form>

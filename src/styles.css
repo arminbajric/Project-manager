@@ -5,3 +5,10 @@ body{
     margin:0;
     background-color:  #303030;
 }
+.user-card{
+    outline: none;
+    border: 0px;
+    background-color: #212121;
+    color: white;
+    margin-left: 1px;
+}
