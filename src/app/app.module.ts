@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
+import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -14,6 +15,9 @@ import { EditWorkplaceComponent } from './components/edit-workplace/edit-workpla
 import { OngoingProjectsComponent } from './components/ongoing-projects/ongoing-projects.component';
 import { CompletedProjectsComponent } from './components/completed-projects/completed-projects.component';
 import { TokenInterceptorService } from './interceptors/token-interceptor.service';
+import { ManageProjectComponent } from './components/manage-project/manage-project.component';
+import { NewActionComponent } from './components/new-action/new-action.component';
+import { NewMettingComponent } from './components/new-metting/new-metting.component';
 
 
 @NgModule({
@@ -28,18 +32,22 @@ import { TokenInterceptorService } from './interceptors/token-interceptor.servic
     EditProjectsComponent,
     EditWorkplaceComponent,
     OngoingProjectsComponent,
-    CompletedProjectsComponent
+    CompletedProjectsComponent,
+    ManageProjectComponent,
+    NewActionComponent,
+    NewMettingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
      HttpClientModule,
-    
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,
     multi: true}],
-  entryComponents:[NewProjectComponent,StatusComponent,EditProjectsComponent,EditWorkplaceComponent,OngoingProjectsComponent,CompletedProjectsComponent],
+  entryComponents:[NewProjectComponent,StatusComponent,EditProjectsComponent,EditWorkplaceComponent,OngoingProjectsComponent,CompletedProjectsComponent,NewActionComponent,NewMettingComponent,NewTaskComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

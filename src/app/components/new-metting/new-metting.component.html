@@ -1,0 +1,33 @@
+<div class="container card col col-md-12">
+  <form (keydown.enter)="$event.preventDefault()" (submit)="saveMeeting()">
+  <div clas="row form-group"><h4>New meeting</h4></div>
+  <div class="row form-group">
+    <label class="col col-md-4" for="topic">Subject</label>
+    <input class="col form-control" list="topics" (change)="addToTopicsList(this.value)" onchange="addTopic(this.value)" placeholder="Type to select project or add topic ..." >
+    <datalist id="topics"></datalist>
+  </div>
+  <div class="row form-group">
+      <label class="col col-md-4" for="topic">Workers</label>
+      <input class="col form-control" list="meeting-workers" onchange="addTopic(this.value)" placeholder="Leave empty to call everyone from project or workplace..." >
+      <datalist id="meeting-workers"></datalist>
+    </div>
+  <div class="row form-group">
+      <label class="col col-md-4" for="topic">Date</label>
+      <input type="date" class="col form-control" list="topics"  placeholder="Select date..." >
+    
+    </div>
+    <div class="row form-group">
+        <label class="col col-md-4" for="topic">Time</label>
+        <input type="time" class="col form-control " list="topics"  placeholder="Select time..." >
+       
+      </div>
+      <div class="row form-group">
+          <label class="col col-md-4" for="topic">Office number</label>
+          <input type="number" class="col form-control " list="topics"  placeholder="Type office number..." >
+         
+        </div>
+        <div class="row  form-group">
+           <button type="submit" class="col col-md-3 offset-9  button">Save</button>           
+          </div>
+</form>
+</div>

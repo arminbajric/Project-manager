@@ -9,14 +9,25 @@
   
     color: white !important;
    
-    max-height: 300px;
+   
     padding-left: 15px;
-    overflow-y: auto;
+   
     margin-top: 10px;
+}
+.button{
+  outline: none;
+  border: 0px;
+  background-color: #303030;
+  color: white;
+}
+button:hover{
+  background-color: #424242;
+  border-radius: 5px;
 }
 .card{
     background-color: #424242;
-    
+    overflow-y: auto;
+    max-height: 300px;
 }
 ::-webkit-scrollbar {
     width: 10px;

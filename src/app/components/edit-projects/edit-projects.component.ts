@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef, ViewChild, ComponentFactoryResolver } from '@angular/core';
+import { NewMettingComponent } from '../new-metting/new-metting.component';
+import { NewTaskComponent } from '../new-task/new-task.component';
 
 @Component({
   selector: 'app-edit-projects',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-projects.component.css']
 })
 export class EditProjectsComponent implements OnInit {
-
-  constructor() { }
+@ViewChild('manage',{read:ViewContainerRef}) block:ViewContainerRef;
+  constructor(private resolver:ComponentFactoryResolver) { }
 
   ngOnInit() {
   }
-
+newMeeting(){
+  this.block.clear();
+  const newBlock=this.resolver.resolveComponentFactory(NewMettingComponent);
+  const ref=this.block.createComponent(newBlock);
+  ref.changeDetectorRef.detectChanges();
+}
+newTask(){
+  this.block.clear();
+  const newBlock=this.resolver.resolveComponentFactory(NewTaskComponent);
+  const ref=this.block.createComponent(newBlock);
+  ref.changeDetectorRef.detectChanges();
+}
 }

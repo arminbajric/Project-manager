@@ -1,0 +1,31 @@
+<div class="container card">
+  <div class="row"><h4>Attach new action</h4></div>
+  <form [formGroup]="actionGroup" (submit)="saveAction()">
+    <div class=" form-group row">
+      <label for="title" class="col col-md-3">Title</label>
+      <input type="text" class="col form-control" formControlName="title" id=title>
+    </div>
+    <div class=" form-group row">
+      <label for="title" class="col col-md-3">Notes</label>
+      <textarea type="text" rows="4" class="col form-control" formControlName="notes" id=title></textarea>
+    </div>
+    <div class="form-group row">
+      <label for="doc" class="col col-md-5">Documentation</label>
+      <input type="file" multiple="true" id="doc" class="col form-control">
+    </div>
+    <div class="form-group row">
+      <label for="deadline" class="col col-md-5">Deadline</label>
+      <input id="deadline" type="date" class="col form-control" formControlName="deadline" placeholder="Date...">
+    </div>
+    <div class="form-group row ">
+      <label for="workersList" class="col col-md-5">Add workers</label>
+      <input type="text" class="col form-control" id="workersList" list="task-workers" onchange="addToAction(this.value)"
+        placeholder="Type to select workers...">
+      <datalist id="task-workers"></datalist>
+    </div>
+    <div class="form-group row">
+     
+      <button class="button col col-md-3 offset-9" type="submit" >Save</button>
+    </div>
+  </form>
+</div>

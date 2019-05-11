@@ -6,7 +6,7 @@ import { MainAppComponent } from './components/main-app/main-app.component';
 
 const routes: Routes = [{
   path:'',
-  redirectTo:'login',
+  redirectTo:'app',
   pathMatch:'full'
 },
 {
@@ -20,6 +20,7 @@ const routes: Routes = [{
 {
   path:'app',
   component:MainAppComponent
+
 }
 ];
 

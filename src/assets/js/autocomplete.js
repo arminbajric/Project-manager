@@ -1,7 +1,8 @@
+export class workersManagment{
+  
 
-var list=getWorkersList();
-function searchFor(value){
-
-
-}
-
+    addSubjectToList(subject){
+  
+    }
+  
+  }

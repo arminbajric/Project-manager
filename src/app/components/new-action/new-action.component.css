@@ -1,0 +1,15 @@
+.button{
+    outline: none;
+    border: 0px;
+    background-color: #212121;
+    color: white;
+   
+  }
+  .button:hover{
+      background-color: #303030;
+
+  }
+  .card{
+      background-color: transparent;
+      margin-bottom: 15px;
+    }

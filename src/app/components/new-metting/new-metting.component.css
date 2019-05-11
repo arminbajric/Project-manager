@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu'); 
+.card{
+    margin-top: 10px;
+    background-color: transparent;
+    padding-right: -5px;
+}
+.container{
+    font-family: 'Ubuntu',sans-serif;
+}
+.button{
+    outline: none;
+    border: 0px;
+    background-color: #212121;
+    color: white;
+   
+  }
+.button:hover{
+    background-color: #111111;
+}

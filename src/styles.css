@@ -4,6 +4,9 @@ body{
     font-family: 'Ubuntu', sans-serif;
     margin:0;
     background-color:  #303030;
+    padding-left: 25px;
+    padding-right: 20px;
+    
 }
 .user-card{
     outline: none;
@@ -12,3 +15,35 @@ body{
     color: white;
     margin-left: 1px;
 }
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  
+  ::-webkit-scrollbar-track {
+    background: #424242; 
+  }
+   
+  
+  ::-webkit-scrollbar-thumb {
+    background: #212121; 
+    border-radius: 3px;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #111111; 
+  }
+  ::-moz-scrollbar{
+    width: 10px;
+  }
+  ::-moz-scrollbar-track {
+    background: #424242; 
+  }
+  ::-moz-scrollbar-thumb {
+    background: #212121; 
+    border-radius: 3px;
+  }
+  ::-moz-scrollbar-thumb:hover {
+    background: #111111; 
+  }

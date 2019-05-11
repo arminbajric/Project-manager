@@ -1,3 +1,49 @@
-<p>
-  new-task works!
-</p>
+<form  (keydown.enter)="$event.preventDefault()" class="card" (submit)="saveTask()" (actionSaved)="clearActionBlock($event)">
+    <div class="container  new-project">
+      <div class="row">
+        <h4>Add new task</h4>
+      </div>
+      <div class="form-group row ">
+        <label class="col col-md-5" for="proName">Action title</label>
+        <input class="col form-control " id="proName" type="text" placeholder="Title...">
+      </div>
+      <div class="form-group row ">
+          <label for="projectsList" class="col col-md-5">Project</label>
+          <input type="text"  class="col form-control" id="projectsList" list="projects"  onchange="addToProject(this.value)" placeholder="Type or select project...">
+          <datalist id="projects"></datalist>
+        </div>
+      <div class="form-group row ">
+        <label class="col col-md-5" for="summary">Action summary</label>
+        <textarea class="col form-control" rows="6" id="summary" placeholder="Summary..."></textarea>
+      </div>
+      <div class="form-group row ">
+        <label class="col col-md-5" for="notes">Important notes</label>
+        <textarea class="col form-control" rows="3" id="notes" placeholder="Notes..."></textarea>
+      </div>
+      <div class="form-group row">
+        <label for="doc" class="col col-md-5">Documentation</label>
+        <input type="file" multiple="true" id="doc" class="col form-control">
+      </div>
+      <div class="form-group row">
+        <label for="deadline" class="col col-md-5">Deadline</label>
+        <input id="deadline" type="date" class="col form-control" placeholder="Date...">
+      </div>
+      <div class="form-group row ">
+        <label for="workersList" class="col col-md-5">Add workers</label>
+        <input type="text"  class="col form-control" id="workersList" list="project-workers"  onchange="addToTask(this.value)" placeholder="Type to select workers...">
+        <datalist id="project-workers"></datalist>
+      </div>
+      <div class="form-group row" id="selected"></div>
+      <div class="form-group row" >
+        <div class="col col-md-2">Actions</div>
+        <div class="col" id="actions"></div>
+      </div>
+      <div class="form-group row" #action></div>
+      <div class="form-group  row">
+          <button type="button" class="button col col-md-3"  (click)="attachAction()">{{actionButton}}</button>
+          <button class="button  col col-md-3 offset-6" type="submit" >Save </button>
+        </div>
+    </div>
+   
+  
+  </form>

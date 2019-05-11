@@ -15,25 +15,23 @@
      document.getElementById("autocomplete").remove();
 }
 var workersList;
-function setWorkersList(list) {
+var selectedProjectWorkers=[];
+function setWorkersList(id,list) {
     workersList = list;
     console.log(workersList);
-    fillWorkersDataList();
+    fillDataList(id,workersList);
 }
 function getWorkersList(){
   return workersList;
 }
-function fillWorkersDataList(){
-  var list=getWorkersList();
+function fillDataList(id,list){
+ 
   for(var i=0;i<list.length;i++)
 {
-  
+  console.log('filllingggg')
       var node=document.createElement('option')
-      
-    
       node.value=list[i];
-      document.getElementById('workers').appendChild(node);
-  
+      document.getElementById(id).appendChild(node);
 }
 }
 function addToProject(element){
@@ -47,6 +45,7 @@ function addToProject(element){
  newNode.setAttribute("onclick","removeWorker(this.id)");
  node.appendChild(newNode);
  document.getElementById("workersList").value="";
+ selectedProjectWorkers.push(element);
 }
 
 function removeWorker(id)
@@ -56,3 +55,17 @@ function removeWorker(id)
 }
 }
 
+function showSavedAction(id){
+  var node=document.getElementById("actions");
+  var newNode=document.createElement("button");
+  newNode.id=id
+  newNode.title="Click to remove";
+  newNode.className+="button";
+  newNode.textContent=id;
+  newNode.setAttribute("onclick","removeWorker(this.id)");
+  node.appendChild(newNode);
+  
+}
+function getSelectedProjectWorkers(){
+  return selectedProjectWorkers;
+}

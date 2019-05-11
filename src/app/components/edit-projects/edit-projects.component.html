@@ -1,22 +1,30 @@
 <div class="container ">
   <div class="row">
-    <h4 class="col">Manage projects<small>[select by name to manage]</small></h4>
+    <h4 class="col">Manage projects</h4>
+    <div class="col col-md-2"><button class="button" (click)="newMeeting()"><img
+          src="../../../assets/images/icons8-users-meeting-filled-50.png" width="25px" height="25px">Meeting</button>
+    </div>
+
+    <div class="col col-md-2"><button class="button" (click)="newTask()"><img
+          src="../../../assets/images/icons8-task-filled-50.png" width="25px" height="25px">Task</button></div>
+  
   </div>
+
   <div class="row card">
     <div class="table table-borderless">
       <thead>
         <tr>
-          <th scope ="col">#</th>
-          <th scope ="col">Project name</th>
-          <th scope ="col">Ongoing for</th>
-          <th scope ="col">Deadline in</th>
-          <th scope ="col">People working</th>
-          <th scope ="col">% completed</th>
+          <th scope="col">#</th>
+          <th scope="col">Project name</th>
+          <th scope="col">Ongoing for</th>
+          <th scope="col">Deadline in</th>
+          <th scope="col">People working</th>
+          <th scope="col">% completed</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope ="row">1</th>
+          <th scope="row">1</th>
           <th><button class="btn project">Ime projekta</button></th>
           <th>2 months,4 days</th>
           <th>1 month,26 days</th>
@@ -24,7 +32,7 @@
           <th>50</th>
         </tr>
         <tr>
-          <th scope ="row">2</th>
+          <th scope="row">2</th>
           <th>Ime projekta</th>
           <th>2 months,4 days</th>
           <th>1 month,26 days</th>
@@ -32,7 +40,7 @@
           <th>50</th>
         </tr>
         <tr>
-          <th scope ="row">2</th>
+          <th scope="row">2</th>
           <th>Ime projekta</th>
           <th>2 months,4 days</th>
           <th>1 month,26 days</th>
@@ -40,7 +48,7 @@
           <th>50</th>
         </tr>
         <tr>
-          <th scope ="row">2</th>
+          <th scope="row">2</th>
           <th>Ime projekta</th>
           <th>2 months,4 days</th>
           <th>1 month,26 days</th>
@@ -48,7 +56,7 @@
           <th>50</th>
         </tr>
         <tr>
-          <th scope ="row">2</th>
+          <th scope="row">2</th>
           <th>Ime projekta</th>
           <th>2 months,4 days</th>
           <th>1 month,26 days</th>
@@ -56,7 +64,7 @@
           <th>50</th>
         </tr>
         <tr>
-          <th scope ="row">2</th>
+          <th scope="row">2</th>
           <th>Ime projekta</th>
           <th>2 months,4 days</th>
           <th>1 month,26 days</th>
@@ -66,4 +74,5 @@
       </tbody>
     </div>
   </div>
+  <div class="row" #manage></div>
 </div>

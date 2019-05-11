@@ -1,0 +1,10 @@
+.card{
+    background-color: transparent;
+    margin-top: 15px;
+}
+.button{
+    outline: none;
+    border: 0px;
+    background-color: #212121;
+    color: white;
+}
