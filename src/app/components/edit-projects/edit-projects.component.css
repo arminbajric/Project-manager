@@ -17,12 +17,12 @@
 .button{
   outline: none;
   border: 0px;
-  background-color: #303030;
-  color: white;
+  background-color: #212121;
+  color:#828282;
 }
 button:hover{
   background-color: #424242;
-  border-radius: 5px;
+
 }
 .card{
     background-color: #424242;
@@ -47,4 +47,12 @@ button:hover{
   
   ::-webkit-scrollbar-thumb:hover {
     background: #111111; 
+  }
+  .icon{
+    margin-right: 10px;
+  }
+  table tbody tr {
+    font-style: 'Ubuntu',sans-serif;
+    color:#A8ABAD;
+    font-style: normal;
   }

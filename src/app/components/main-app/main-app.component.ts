@@ -20,7 +20,12 @@ export class MainAppComponent implements OnInit {
     const ref=this.mainBlock.createComponent(block);
     ref.changeDetectorRef.detectChanges();
   }
- 
+ home(){
+  this.mainBlock.clear();
+  const block=this.resolver.resolveComponentFactory(StatusComponent);
+  const ref=this.mainBlock.createComponent(block);
+  ref.changeDetectorRef.detectChanges();
+ }
 addNewProject(){
   this.mainBlock.clear();
   const block=this.resolver.resolveComponentFactory(NewProjectComponent);

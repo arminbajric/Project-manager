@@ -1,22 +1,30 @@
 .new-project{
    
-    color:white;
+    color:#E5E8EA;
     padding-left: 15px;
 }
 .button{
     outline: none;
     border: 0px;
     background-color: #212121;
-    color: white;
+    color: #626262;
 }
 .button:hover{
     background-color: #303030;
 }
 .card{
-    background-color: #424242;
+    background-color: transparent;
     padding-left: 2px;
     padding-right: 5px;
     margin-top: 5px;
+}
+input{
+  background-color: #E5E8EA;
+  color:#111111;
+}
+textarea{
+  background-color: #E5E8EA;
+  color:#111111;
 }
 datalist { 
     display: none;
@@ -28,7 +36,7 @@ datalist {
     width: 10px;
   }
   
-  
+ 
   #workersList::-webkit-scrollbar-track {
     background: #424242; 
   }

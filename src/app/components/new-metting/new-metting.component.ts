@@ -17,4 +17,5 @@ export class NewMettingComponent implements OnInit {
     setWorkersList('meeting-workers',this.workersList);
   }
 saveMeeting(){}
+addToTopicsList(){}
 }

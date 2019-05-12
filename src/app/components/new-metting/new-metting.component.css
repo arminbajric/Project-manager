@@ -17,3 +17,11 @@
 .button:hover{
     background-color: #111111;
 }
+input{
+    background-color: #E5E8EA;
+    color:#111111;
+  }
+  textarea{
+    background-color: #E5E8EA;
+    color:#111111;
+  }

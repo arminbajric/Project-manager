@@ -1,9 +1,13 @@
 <div class="container">
-  <div class="row">
-    <h5>Workplace data</h5>
-  </div>
+    <div class="row">
+        <button type="button" id="roleButton"  class="col col-md-3 button"  (click)="roleSettings()"><img src="../../../assets/images/icons8-automatic-filled-50.png" width="25px" height="25px" class="icon"><span class="icon">Roles</span></button>
+        <button type="button" id="skillButton" class="col col-md-3 button"  (click)="skillsSettings()"><img src="../../../assets/images/icons8-settings-button-filled-50.png" width="25px" height="25px" class="icon"><span class="icon">Skills</span></button>
+      </div>
   <div class="row">
     <div class="card card-default col">
+      <div class="row">
+        <h5>People in your work cicrle</h5>
+      </div>
       <table class="table table-borderless">
         <thead>
           <tr>
@@ -13,8 +17,7 @@
             <th scope="col">Projects assign</th>
             <th scope="col">Worked on</th>
             <th scope="col">Tasks involved</th>
-            <th scope="col">Actions validated</th>
-            <th scope="col">Actions created</th>
+            <th scope="col">Role</th>
           </tr>
         </thead>
         <tbody>
@@ -25,8 +28,7 @@
             <th>2</th>
             <th>12</th>
             <th>34</th>
-            <th>55</th>
-            <th>11</th>
+            <th>Worker</th>
           </tr>
           <tr>
             <th scope="row">1</th>
@@ -35,8 +37,61 @@
             <th>2</th>
             <th>12</th>
             <th>34</th>
-            <th>55</th>
-            <th>11</th>
+            <th>Worker</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <form class="col col-md-12">
+      <div class="card col col-md-12">
+        <div class="row form-group"><label class="col col-md-3" for="circle">Add people to circle</label>
+          <input class="col form-control" placeholder="Type name,role or skills..." type="text" list="workers"
+            >
+
+          <datalist id="workers"></datalist>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+
+    <div class="card col col-md-12">
+      <h5 class="row">All workers listed</h5>
+      <table class="table table-borderless">
+        <thead>
+          <tr scope="row">
+            <th scope="col">#</th>
+            <th scope="col">Employee</th>
+            <th scope="col">Role</th>
+            <th scope="col">Email</th>
+            <th scope="col">Adress</th>
+            <th scope="col">Main skill</th>
+            <th scope="col">Other skills</th>
+            <th scope="col">Experience</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr scope="row">
+            <th scope="col">#</th>
+            <th scope="col">Jon Jan</th>
+            <th scope="col">Workes</th>
+            <th scope="col">jon@org.com</th>
+            <th scope="col">No street 2</th>
+            <th scope="col">Skill</th>
+            <th scope="col">Skill,Skill</th>
+            <th scope="col">4</th>
+          </tr>
+          <tr scope="row">
+            <th scope="col">#</th>
+            <th scope="col">Jon Jan</th>
+            <th scope="col">Workes</th>
+            <th scope="col">jon@org.com</th>
+            <th scope="col">No street 2</th>
+            <th scope="col">Skill</th>
+            <th scope="col">Skill,Skill</th>
+            <th scope="col">4</th>
           </tr>
         </tbody>
       </table>

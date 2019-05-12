@@ -1,10 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu'); 
+
 .card{
     background-color: transparent;
-   
+    margin-top:20px;
+   padding-top: 10px;
+   color: #626262;
+   max-height: 300px;
+   overflow: auto;
 }
-.table{
-    color:white;
+.table-borderless{
+    color:#727272;
+    font-family: 'Ubuntu',sans-serif;
+    font-style: normal;
 }
 h5{
-    color:white;
+    color:#727272;
+}
+.button{
+    margin-left: 5px;
+    outline: none;
+    border:none;
+    background-color: #212121;
+    color:#828282;
+    padding-top: 5px;
+    padding-bottom: 5px;
+ }
+ .button:hover{
+    background-color: #424242;
+ }
+ input{
+    background-color: #929292;
+    color:#111111;
+  }
+  textarea{
+    background-color: #929292;
+    color:#111111;
+  }
+.table-borderless{
+    color:#E5E8EA;
 }

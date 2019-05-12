@@ -3,7 +3,7 @@
   <div clas="row form-group"><h4>New meeting</h4></div>
   <div class="row form-group">
     <label class="col col-md-4" for="topic">Subject</label>
-    <input class="col form-control" list="topics" (change)="addToTopicsList(this.value)" onchange="addTopic(this.value)" placeholder="Type to select project or add topic ..." >
+    <input class="col form-control" list="topics"  onchange="addTopic(this.value)" placeholder="Type to select project or add topic ..." >
     <datalist id="topics"></datalist>
   </div>
   <div class="row form-group">

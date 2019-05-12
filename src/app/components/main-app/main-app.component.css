@@ -1,13 +1,13 @@
 .user{
    text-align: center;
-   color: white;
+   color: #929292;
 }
 .text-center{
    text-align: center;
 }
 .title{
    background-color: black;
-   color:#212121;
+   color:#727272;
    text-align: center;
    border-radius: 5px;
 }
@@ -22,7 +22,7 @@ button{
 }
 .menuButton{
    background-color: #303030;
-   color:white;
+   color:#828282;
    padding-top: 5px;
    padding-bottom: 5px;
 }
@@ -35,6 +35,9 @@ button{
    max-height: 350px !important;
   
    
+}
+.stateIcon{
+   float: right;
 }
 
 .icon{
@@ -70,3 +73,21 @@ button{
     min-height: 80px !important;
     margin:3px;
  }
+ .hide{
+    visibility: hidden;
+ }
+ .show{
+    visibility: visible;
+ }
+ .footer{
+    margin-top:30px;
+ }
+ .footerOption{
+    color:#929292;
+ }
+.info{
+   float: right;
+}
+a:hover{
+   text-decoration: none;
+}

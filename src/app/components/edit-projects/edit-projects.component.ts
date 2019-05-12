@@ -25,4 +25,5 @@ newTask(){
   const ref=this.block.createComponent(newBlock);
   ref.changeDetectorRef.detectChanges();
 }
+
 }

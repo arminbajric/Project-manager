@@ -47,3 +47,11 @@ body{
   ::-moz-scrollbar-thumb:hover {
     background: #111111; 
   }
+  input{
+    background-color: #929292;
+    color:#111111;
+  }
+  textarea{
+    background-color: #929292;
+    color:#111111;
+  }

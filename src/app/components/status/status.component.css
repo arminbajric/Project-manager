@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu'); 
+
 .container{
-    color: white;
+   
     padding-left: 15px;
 }
 .card{
-    background-color: #424242;
+    background-color: transparent;
 }
-.table{
+.table-borderless{
+    color: #727272;
     border:none !important;
+    font-style: 'Ubuntu',sans-serif;
+}
+h5{
+    color:#828282;
 }
