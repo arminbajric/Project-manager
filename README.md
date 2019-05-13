@@ -12,6 +12,6 @@ different tasks in differnt projects.Each project will be started by project man
 Each task will be submitted after all actions are validated.
 Employees assigned to project can create new tasks and assign them to colegues but it must be approved by project manager.
  
-Development version can be found on this www.link fir-project-manager-f67d4.firebaseapp.com
+Development version can be found on this link  www.fir-project-manager-f67d4.firebaseapp.com
 
 
