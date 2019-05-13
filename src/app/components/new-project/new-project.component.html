@@ -17,15 +17,16 @@
     </div>
     <div class="form-group row">
       <label for="doc" class="col col-md-5">Documentation</label>
-      <input type="file" multiple="true" id="doc" class="col form-control">
+      <input type="file" multiple="true" id="projectDoc" (change)="onFileChanged($event)" class="col form-control">
     </div>
+    <div class="row" id="projectDocumentation"></div>
     <div class="form-group row">
       <label for="deadline" class="col col-md-5">Deadline</label>
       <input id="deadline" type="date" class="col form-control" placeholder="Date...">
     </div>
     <div class="form-group row ">
       <label for="workersList" class="col col-md-5">Add workers</label>
-      <input type="text"  class="col form-control" id="workersList" list="workers"  onchange="addToProject(this.value)" placeholder="Type to select workers...">
+      <input type="text"  class="col form-control" id="workersListProject" list="workers"  onchange="addWorkers('selected',this.value)" placeholder="Type to select workers...">
       <datalist id="workers"></datalist>
     </div>
     <div class="form-group row" id="selected"></div>

@@ -1,3 +1,91 @@
-<p>
-  login works!
-</p>
+<div class="container box">
+  <div class="row ">
+    <div class="col col-md-4 offset-4 title">
+      <img src="../../../assets/images/icons8-training-filled-50.png" height="80" width="80">
+    </div>
+  </div>
+  <div class="row card">
+    <div class="col col-md-4 offset-4 title">
+      <h2>Project manager</h2>
+    </div>
+    <div class="row">
+      <div class="col title">Login or register to access your app depending on your role.</div>
+    </div>
+    <div class="row">
+      <div class="col title">If you have any doubts check app footer and if needed contact administrator.</div>
+    </div>
+    <div class="row">
+      <div class="col title">If you have problems with login or your registration or you have forgotten your password
+        click <a href="#"> here</a></div>
+    </div>
+    <div class="row">
+      <div class="col title">This is DEMO so yust click login for manager and register for regular user!!!!!</div>
+    </div>
+  </div>
+  <form class="form" (submit)="login()">
+    <div class="row card login">
+
+      <div class="container">
+        <div class="row form-group">
+          <div class="col col-md-4 offset-4  title">
+            <h4>Login</h4>
+          </div>
+        </div>
+        <div class="row form-group">
+          <label for="email" class="col col-md-2 offset-2">Email</label>
+          <input class="col col-md-6 form-control" id="email" type="email">
+        </div>
+        <div class="row form-group">
+          <label for="password" class="col col-md-2 offset-2">Password</label>
+          <input class="col col-md-6 form-control" id="password" type="password">
+        </div>
+        <div class="row form-group">
+          <button type="submit" class="col col-md-3 offset-3 buttonLogin">Login</button>
+          <button type="button" class="col col-md-3 buttonRegister">Register</button>
+        </div>
+      </div>
+
+    </div>
+  </form>
+  <div class="row footer col col-md-10">
+    <div class="container ">
+      <div class="row ">
+        <button class="footerOption col col-md-2" onclick="resolveCollapse('abt')" type="button"
+          data-toggle="collapse" data-target="#about" aria-expanded="false">
+          About
+        </button>
+        <button class="footerOption col col-md-2" onclick="resolveCollapse('dev')" type="button"
+          data-toggle="collapse" data-target="#developer" aria-expanded="false">
+          Developer
+        </button>
+        <button class="footerOption col col-md-2" onclick="resolveCollapse('soc')" type="button"
+          data-toggle="collapse" data-target="#social" aria-expanded="false">
+          Social
+        </button>
+
+
+        <div class="collapse row" id="about">
+          <div class="card card-body">
+            <a id="abt" href="#abt">About</a>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </div>
+        <div class="collapse row" id="developer">
+          <div class="card card-body">
+            <a id="dev" href="#dev">Developer</a>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </div>
+        <div class="collapse row" id="social">
+          <div class="card card-body">
+            <a id="soc" href="#soc">Social</a>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

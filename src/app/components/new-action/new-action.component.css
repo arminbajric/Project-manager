@@ -14,10 +14,16 @@
       margin-bottom: 15px;
     }
     input{
-      background-color: #929292;
+      background-color: #E5E8EA;
       color:#111111;
     }
     textarea{
-      background-color: #929292;
+      background-color: #E5E8EA;
       color:#111111;
+    }
+    input button{
+      outline: none;
+      border: 0px;
+      background-color: #212121;
+      color: white;
     }

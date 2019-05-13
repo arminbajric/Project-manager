@@ -1,39 +1,67 @@
 import { Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolver, Input } from '@angular/core';
 import { NewActionComponent } from '../new-action/new-action.component';
-declare var setWorkersList:Function;
+import { TaskService } from 'src/app/services/task.service';
+declare var setWorkersList: Function;
+declare var showDocumentation:Function;
 @Component({
   selector: 'app-new-task',
   templateUrl: './new-task.component.html',
   styleUrls: ['./new-task.component.css'],
-  entryComponents:[NewActionComponent],
+  entryComponents: [NewActionComponent],
 
 })
 export class NewTaskComponent implements OnInit {
-  @Input() actionButton:string;
-@ViewChild('action',{read:ViewContainerRef}) block:ViewContainerRef;
-  constructor(private resolver:ComponentFactoryResolver) { }
-  workersList = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua &amp; Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia &amp; Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre &amp; Miquelon", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts &amp; Nevis", "St Lucia", "St Vincent", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad &amp; Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks &amp; Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
-
+  @Input() actionButton: string;
+  @ViewChild('action', { read: ViewContainerRef }) block: ViewContainerRef;
+  constructor(private resolver: ComponentFactoryResolver, private taskService: TaskService) { }
+filesArray: string[];
+workersList:any;
   ngOnInit() {
-    setWorkersList('project-workers',this.workersList);
-    this.actionButton='Attach action';
+    this.workersList=this.taskService.getProjectWorkers();
+    setWorkersList('project-workers', this.workersList);
+    this.actionButton = 'Attach action';
   }
-attachAction(){
-  if(this.actionButton=='Attach action'){
-  const newBlock=this.resolver.resolveComponentFactory(NewActionComponent);
-  const ref=this.block.createComponent(newBlock);
-  ref.changeDetectorRef.detectChanges();
-  this.actionButton='Detach form';
+  attachAction() {
+    if (this.actionButton == 'Attach action') {
+      const newBlock = this.resolver.resolveComponentFactory(NewActionComponent);
+      const ref = this.block.createComponent(newBlock);
+      ref.changeDetectorRef.detectChanges();
+      this.actionButton = 'Detach form';
+    }
+
+    else {
+      this.block.clear();
+      this.actionButton = 'Attach action';
+    }
   }
+  saveTask() { }
 
-else{
-this.block.clear();
-this.actionButton='Attach action';
-}
-}
-saveTask(){}
+  clearActionBlock() {
+    this.block.clear();
+  }
+  onFileChanged(event) {
 
-clearActionBlock(){
-  this.block.clear();
-}
+    this.filesArray=new Array();
+  
+   if(event.target.files && event.target.files.length > 0) {
+     let files = event.target.files;
+     
+     for(let i=0;i<files.length;i++){
+     let reader = new FileReader();
+     let file=event.target.files[i];
+     reader.readAsDataURL(file);
+     reader.onload = () => {
+      
+       const value:String=reader.result.toString();
+       
+       return file.name
+     }
+     this.filesArray[i]=file.name;
+   }
+   console.log(this.filesArray.length)
+   
+ }
+ showDocumentation('taskDocumentation',this.filesArray)
+ 
+ }
 }

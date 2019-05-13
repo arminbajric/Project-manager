@@ -18,6 +18,7 @@ import { TokenInterceptorService } from './interceptors/token-interceptor.servic
 import { ManageProjectComponent } from './components/manage-project/manage-project.component';
 import { NewActionComponent } from './components/new-action/new-action.component';
 import { NewMettingComponent } from './components/new-metting/new-metting.component';
+import { UsersComponent } from './components/users/users.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { NewMettingComponent } from './components/new-metting/new-metting.compon
     CompletedProjectsComponent,
     ManageProjectComponent,
     NewActionComponent,
-    NewMettingComponent
+    NewMettingComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

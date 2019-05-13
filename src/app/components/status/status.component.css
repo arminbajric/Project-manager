@@ -6,6 +6,8 @@
 }
 .card{
     background-color: transparent;
+    max-height: 300px;
+    overflow: auto;
 }
 .table-borderless{
     color: #727272;

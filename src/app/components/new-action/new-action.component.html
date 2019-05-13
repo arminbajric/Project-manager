@@ -11,7 +11,10 @@
     </div>
     <div class="form-group row">
       <label for="doc" class="col col-md-5">Documentation</label>
-      <input type="file" multiple="true" id="doc" class="col form-control">
+      <input type="file" multiple="true" (change)="onFileChanged($event)" id="actionDoc" class="col form-control">
+    </div>
+    <div class="form-group row" id="actionDocumentation">
+
     </div>
     <div class="form-group row">
       <label for="deadline" class="col col-md-5">Deadline</label>
@@ -19,9 +22,13 @@
     </div>
     <div class="form-group row ">
       <label for="workersList" class="col col-md-5">Add workers</label>
-      <input type="text" class="col form-control" id="workersList" list="task-workers" onchange="addToAction(this.value)"
+      <input type="text" class="col form-control" id="workersListAction" list="task-workers" onchange="addWorkers('selectedAction',this.value)"
         placeholder="Type to select workers...">
       <datalist id="task-workers"></datalist>
+    </div>
+    <div class="row form-group">
+      <label for="selectedAction" class="col col-md-3">Workers</label>
+      <div class="col" id="selectedAction"></div>
     </div>
     <div class="form-group row">
      

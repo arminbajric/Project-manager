@@ -1,8 +1,8 @@
 <div class="container col ">
   <div class="row">
     <div id="fixedMenu" class="col col-lg-3 ">
-     
-      <h4 class="title">Task manager</h4>
+
+      <h4 class="title">Project manager</h4>
       <div class="row card ">
         <div class="col user">
           <img src="../../../assets/images/user.png" width="60px" height="60px" alt="User icon"><br>
@@ -12,50 +12,70 @@
 
       </div>
       <div class="row">
-          <button type="button" id="home" class="col menuButton active" onclick="setActive(this.id,'newH')" (click)="home()"><img src="../../../assets/images/icons8-home-page-filled-50.png" width="25px" height="25px" class="icon"><span class="icon">Home</span><img class="stateIcon show" id="newH" src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"></button>
-        </div>
-      <div class="row">
-        <button type="button" id="new" class="col menuButton" onclick="setActive(this.id,'newP')" (click)="addNewProject()"><img src="../../../assets/images/icons8-add-filled-50.png" width="25px" height="25px" class="icon"><span class="icon">New project</span><img class="stateIcon hide" id="newP" src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"></button>
+        <button type="button" id="home" class="col menuButton active" onclick="setActive(this.id,'newH')"
+          (click)="home()"><img src="../../../assets/images/icons8-home-page-filled-50.png" width="25px" height="25px"
+            class="icon"><span class="icon">Home</span><img class="stateIcon show" id="newH"
+            src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"></button>
       </div>
       <div class="row">
-        <button type="button" id="edit" class="col menuButton" onclick="setActive(this.id,'newM')" (click)="manageProjects()"><img src="../../../assets/images/icons8-compose-filled-50.png" width="25px" height="25px" class="icon"><span class="icon">Manage</span><img class="stateIcon hide" id="newM" src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"> </button>
+        <button type="button" id="new" class="col menuButton" onclick="setActive(this.id,'newP')"
+          (click)="addNewProject()"><img src="../../../assets/images/icons8-add-filled-50.png" width="25px"
+            height="25px" class="icon"><span class="icon">New project</span><img class="stateIcon hide" id="newP"
+            src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"></button>
       </div>
       <div class="row">
-        <button type="button" id="manage" class="col menuButton" onclick="setActive(this.id,'newW')" (click)="manageWorkplace()"><img src="../../../assets/images/icons8-user-account-26.png" width="25px" height="25px" class="icon"><span class="icon">Workplace circle</span><img class="stateIcon hide" id="newW" src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"></button>
+        <button type="button" id="edit" class="col menuButton" onclick="setActive(this.id,'newM')"
+          (click)="manageProjects()"><img src="../../../assets/images/icons8-compose-filled-50.png" width="25px"
+            height="25px" class="icon"><span class="icon">Manage</span><img class="stateIcon hide" id="newM"
+            src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"> </button>
       </div>
       <div class="row">
-        <button type="button" id="ongoing" class="col menuButton" onclick="setActive(this.id,'newO')" (click)="ongoingProjects()"><img src="../../../assets/images/icons8-road-construction-filled-50.png" width="25px" height="25px" class="icon"><span class="icon">Ongoing</span> <img class="stateIcon hide" id="newO" src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"></button>
+        <button type="button" id="manage" class="col menuButton" onclick="setActive(this.id,'newW')"
+          (click)="manageWorkplace()"><img src="../../../assets/images/icons8-user-account-26.png" width="25px"
+            height="25px" class="icon"><span class="icon">Workplace circle</span><img class="stateIcon hide" id="newW"
+            src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"></button>
       </div>
       <div class="row">
-        <button type="button" id="done" class="col menuButton" onclick="setActive(this.id,'newC')" (click)="finishedProjects()"><img src="../../../assets/images/icons8-checkmark-filled-50.png" width="25px" height="25px" class="icon"><span class="icon">Completed</span><img class="stateIcon hide" id="newC" src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"></button>
+        <button type="button" id="ongoing" class="col menuButton" onclick="setActive(this.id,'newO')"
+          (click)="ongoingProjects()"><img src="../../../assets/images/icons8-road-construction-filled-50.png"
+            width="25px" height="25px" class="icon"><span class="icon">Ongoing</span> <img class="stateIcon hide"
+            id="newO" src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"></button>
+      </div>
+      <div class="row">
+        <button type="button" id="done" class="col menuButton" onclick="setActive(this.id,'newC')"
+          (click)="finishedProjects()"><img src="../../../assets/images/icons8-checkmark-filled-50.png" width="25px"
+            height="25px" class="icon"><span class="icon">Completed</span><img class="stateIcon hide" id="newC"
+            src="../../../assets/images/icons8-right-filled-50.png" width="25px" height="25px"></button>
       </div>
       <div class="row card activity">
-       
+
         <div class="container">
-          <div class="row"> <h5>Recent activity</h5></div>
           <div class="row">
-            <div class="col card activity-card">
-             Activity 1
-            </div>
-            
+            <h5>Recent activity</h5>
           </div>
           <div class="row">
             <div class="col card activity-card">
-             Activity 2
+              Activity 1
             </div>
-            
+
           </div>
           <div class="row">
             <div class="col card activity-card">
-             Activity 3
+              Activity 2
             </div>
-            
+
           </div>
           <div class="row">
             <div class="col card activity-card">
-             Activity 4
+              Activity 3
             </div>
-            
+
+          </div>
+          <div class="row">
+            <div class="col card activity-card">
+              Activity 4
+            </div>
+
           </div>
         </div>
       </div>
@@ -63,51 +83,54 @@
     <div class="col ">
       <div class="container">
         <div #main class="row  ">
-        
 
 
 
-        
+
+
         </div>
       </div>
     </div>
   </div>
-  <div class="row card footer">
-    <div class="col col-md-12">
-      <div class="container">
-        <div class="row">
-            <button class="button footerOption col-md-2"  onclick="resolveCollapse('abt')" type="button" data-toggle="collapse" data-target="#about" aria-expanded="false" >
-               About
-              </button>
-              <button class="button footerOption col-md-2"  onclick="resolveCollapse('dev')" type="button" data-toggle="collapse" data-target="#developer" aria-expanded="false" >
-                 Developer
-                 </button>
-                 <button class="button footerOption col-md-2"  onclick="resolveCollapse('soc')" type="button" data-toggle="collapse" data-target="#social" aria-expanded="false" >
-                   Social
-                   </button>
-                
-           
-            <div class="collapse row" id="about">
-              <div class="card card-body">
-                  <a id="abt" href="#abt">About</a>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
-            <div class="collapse row" id="developer">
-                <div class="card card-body">
-                    <a id="dev" href="#dev">Developer</a>
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                </div>
-              </div>
-              <div class="collapse row" id="social">
-                  <div class="card card-body">
-                    <a id="soc" href="#soc">Social</a>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                  </div>
-                </div>
+  <div class="row footer col col-md-12">
+    <div class="container ">
+      <div class="row ">
+        <button class="footerOption col col-md-2" onclick="resolveCollapse('abt')" type="button" data-toggle="collapse"
+          data-target="#about" aria-expanded="false">
+          About
+        </button>
+        <button class="footerOption col col-md-2" onclick="resolveCollapse('dev')" type="button" data-toggle="collapse"
+          data-target="#developer" aria-expanded="false">
+          Developer
+        </button>
+        <button class="footerOption col col-md-2" onclick="resolveCollapse('soc')" type="button" data-toggle="collapse"
+          data-target="#social" aria-expanded="false">
+          Social
+        </button>
+
+
+        <div class="collapse row" id="about">
+          <div class="card card-body">
+            <a id="abt" href="#abt">About</a>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </div>
+        <div class="collapse row" id="developer">
+          <div class="card card-body">
+            <a id="dev" href="#dev">Developer</a>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </div>
+        <div class="collapse row" id="social">
+          <div class="card card-body">
+            <a id="soc" href="#soc">Social</a>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
         </div>
       </div>
     </div>
-
   </div>
 </div>
